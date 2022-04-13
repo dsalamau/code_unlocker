@@ -30,6 +30,8 @@ module UserInterface
 
     puts 'Result:'
     CodeUnlocker.run(initial_combination, final_combination, restricted_combinations: restricted_combinations)
+  rescue StandardError
+    'Please clearly follow the instructions!'
   end
 
   def self.convert_to_array(string, separator: ',', &block)
